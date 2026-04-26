@@ -255,10 +255,6 @@ export const en = {
     subjectLabel: 'Subject',
     messageLabel: 'Message',
     submit: 'Submit',
-    infoTitle: 'Contact Information',
-    address: 'Address: Room 414, 4th Floor, Helios Kannai Building, 3-21-2 Motohama-cho, Naka-ku, Yokohama-shi, Kanagawa, Japan',
-    phone: 'Phone: +886-9-1030-9865',
-    email: 'Email: contact@trio-soft.biz',
   },
   careers: {
     pageTitle: 'Careers at Trio-Soft',
