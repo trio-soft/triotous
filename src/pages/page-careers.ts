@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import '../components/trio-cta-section';
-import { USERS_SVG, ROCKET_SVG, LIGHTBULB_SVG, GEAR_SVG, GLOBE_24_SVG, LIST_CHECKS_SVG, BRIEFCASE_SVG } from '../icons';
+import { USERS_SVG, ROCKET_SVG, LIGHTBULB_SVG, GEAR_SVG, GLOBE_24_SVG } from '../icons';
 
 const iconMap: Record<string, string> = {
   users: USERS_SVG,
@@ -93,97 +93,14 @@ export class PageCareers extends LitElement {
       line-height: 1.8;
       color: #333;
     }
-    .job-card {
-      margin: 1rem;
-      padding: 1.5rem;
-      border-radius: 0.75rem;
-      border: 1px solid #d5dce2;
-      background: #fff;
-    }
-    .job-title {
-      font-size: 20px;
-      font-weight: bold;
-      color: #111518;
-      margin: 0 0 0.5rem;
-    }
-    .job-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 1rem;
-      font-size: 14px;
-      color: #5e7387;
-    }
-    .job-meta span {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-    .job-desc {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #333;
-      margin: 0 0 1rem;
-    }
-    .job-section-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: #111518;
-      margin: 1rem 0 0.5rem;
-    }
-    .job-list {
-      padding-left: 1.25rem;
-      margin: 0;
-    }
-    .job-list li {
-      font-size: 14px;
-      line-height: 1.7;
-      color: #333;
-    }
     .json-ld { display: none; }
     @media (max-width: 768px) {
       .page-title { font-size: 24px; }
       .values-grid { grid-template-columns: 1fr; }
-      .job-card { margin: 0.5rem; padding: 1rem; }
     }
   `;
 
-  private getJsonLd() {
-    if (!this.data.jobs?.length) return '';
-    const job = this.data.jobs[0];
-    const schema = {
-      '@context': 'https://schema.org/',
-      '@type': 'JobPosting',
-      title: job.title,
-      description: job.description,
-      datePosted: '2025-03-15',
-      employmentType: ['FULL_TIME', 'CONTRACTOR'],
-      jobLocationType: 'TELECOMMUTE',
-      applicantLocationRequirements: { '@type': 'Country', name: 'Japan' },
-      hiringOrganization: {
-        '@type': 'Organization',
-        name: 'Trio-Soft',
-        sameAs: 'https://trio-soft.biz',
-        logo: 'https://trio-soft.biz/logo.png',
-      },
-      jobLocation: {
-        '@type': 'Place',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Yokohama',
-          addressRegion: 'Kanagawa',
-          addressCountry: 'JP',
-        },
-      },
-    };
-    return JSON.stringify(schema);
-  }
-
   render() {
-    const responsibilitiesLabel = this.lang === 'jp' ? '主な業務内容' : 'Responsibilities';
-    const requirementsLabel = this.lang === 'jp' ? '必須スキル・経験' : 'Requirements';
-    const niceToHaveLabel = this.lang === 'jp' ? '歓迎スキル' : 'Nice to Have';
-
     return html`
       <div class="container">
         <h1 class="page-title">${this.data.pageTitle}</h1>
@@ -207,30 +124,6 @@ export class PageCareers extends LitElement {
           ${this.data.cultureItems?.map((item: string) => html`<li>${item}</li>`)}
         </ul>
 
-        <h2 class="section-heading">${this.data.jobsTitle}</h2>
-        ${this.data.jobs?.map((job: any) => html`
-          <div class="job-card">
-            <h3 class="job-title">${job.title}</h3>
-            <div class="job-meta">
-              <span>📍 ${job.location}</span>
-              <span>💼 ${job.type}</span>
-            </div>
-            <p class="job-desc">${job.description}</p>
-            <div class="job-section-title">${responsibilitiesLabel}</div>
-            <ul class="job-list">
-              ${job.responsibilities?.map((r: string) => html`<li>${r}</li>`)}
-            </ul>
-            <div class="job-section-title">${requirementsLabel}</div>
-            <ul class="job-list">
-              ${job.requirements?.map((r: string) => html`<li>${r}</li>`)}
-            </ul>
-            <div class="job-section-title">${niceToHaveLabel}</div>
-            <ul class="job-list">
-              ${job.niceToHave?.map((r: string) => html`<li>${r}</li>`)}
-            </ul>
-          </div>
-        `)}
-
         <trio-cta-section
           .title=${this.data.applyTitle}
           .subtitle=${this.data.applySubtitle}
@@ -239,7 +132,6 @@ export class PageCareers extends LitElement {
           .lang=${this.lang}>
         </trio-cta-section>
 
-        <script class="json-ld" type="application/ld+json" .textContent=${this.getJsonLd()}></script>
       </div>
     `;
   }
