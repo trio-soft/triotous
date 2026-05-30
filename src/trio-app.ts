@@ -27,15 +27,17 @@ export class TrioApp extends LitElement {
       display: block;
       min-height: 100vh;
       font-family: 'Inter', 'Noto Sans JP', 'Noto Sans', sans-serif;
-      background-color: #f8fafc;
-      color: #0e141b;
+      background-color: #f9f9ff;
+      color: #141b2b;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     .app-container {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      max-width: 1200px;
+      max-width: 1120px;
       margin: 0 auto;
     }
     main {

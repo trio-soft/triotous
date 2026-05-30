@@ -10,14 +10,22 @@ export class TrioNewsItem extends LitElement {
 
   static styles = css`
     :host { display: block; }
-    .news-item { display: flex; align-items: stretch; justify-content: space-between; gap: 16px; border-radius: 12px; padding: 16px; }
-    .news-item-text { display: flex; flex-direction: column; gap: 4px; flex: 2; }
-    .news-item-category, .news-item-description { color: #4d7399; font-size: 14px; line-height: 1.5; margin: 0; }
-    .news-item-title { color: #0e141b; font-size: 16px; font-weight: 700; line-height: 1.3; margin: 0; }
-    .news-item-image-wrap { flex: 1; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; }
-    .news-item-image { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .news-item {
+      display: flex; align-items: stretch; justify-content: space-between; gap: 20px;
+      border-radius: 0.75rem; padding: 20px;
+      border: 1px solid transparent;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .news-item:hover { background: #f1f3ff; border-color: #c7c4d8; }
+    .news-item-text { display: flex; flex-direction: column; gap: 6px; flex: 2; }
+    .news-item-category { color: #4f46e5; font-size: 12px; font-weight: 600; line-height: 1.5; margin: 0; letter-spacing: 0.05em; text-transform: uppercase; }
+    .news-item-description { color: #777587; font-size: 14px; line-height: 1.5; margin: 0; }
+    .news-item-title { color: #141b2b; font-size: 16px; font-weight: 600; line-height: 1.3; margin: 0; }
+    .news-item-image-wrap { flex: 1; aspect-ratio: 16/9; border-radius: 0.75rem; overflow: hidden; box-shadow: 0 2px 4px rgb(0 0 0 / 0.06); }
+    .news-item-image { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
+    .news-item:hover .news-item-image { transform: scale(1.03); }
     @media (max-width: 768px) {
-      .news-item { flex-direction: column; }
+      .news-item { flex-direction: column; padding: 16px; }
       .news-item-image-wrap { aspect-ratio: 16/9; }
     }
   `;

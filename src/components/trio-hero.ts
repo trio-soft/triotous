@@ -11,18 +11,19 @@ export class TrioHero extends LitElement {
 
   static styles = css`
     :host { display: block; }
-    .hero-container { padding: 16px; }
+    .hero-container { padding: 24px; }
     .hero-banner {
       position: relative;
       display: flex;
-      min-height: 480px;
+      min-height: 520px;
       flex-direction: column;
       gap: 24px;
-      border-radius: 12px;
+      border-radius: 0.75rem;
       align-items: flex-start;
       justify-content: flex-end;
-      padding: 40px;
+      padding: 48px;
       overflow: hidden;
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
     }
     .hero-image {
       position: absolute;
@@ -34,24 +35,27 @@ export class TrioHero extends LitElement {
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);
+      background: linear-gradient(to bottom, rgba(20,27,43,0.05) 0%, rgba(20,27,43,0.55) 100%);
     }
-    .hero-content { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
-    .hero-text { display: flex; flex-direction: column; gap: 8px; }
+    .hero-content { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 28px; align-items: flex-start; }
+    .hero-text { display: flex; flex-direction: column; gap: 12px; }
     .hero-title {
-      color: white; font-size: clamp(36px, 5vw, 48px); font-weight: 900;
-      line-height: 1.2; letter-spacing: -0.033em; margin: 0;
+      color: white; font-size: clamp(32px, 5vw, 48px); font-weight: 700;
+      line-height: 1.1; letter-spacing: -0.02em; margin: 0;
     }
-    .hero-subtitle { color: white; font-size: 16px; line-height: 1.5; margin: 0; max-width: 720px; }
+    .hero-subtitle { color: rgba(255,255,255,0.9); font-size: 18px; line-height: 1.6; margin: 0; max-width: 640px; }
     .hero-btn {
       display: inline-flex; min-width: 84px; align-items: center; justify-content: center;
-      border-radius: 9999px; height: 48px; padding: 0 20px; background: #1572cf; color: #f8fafc;
-      font-size: 16px; font-weight: 700; letter-spacing: 0.015em; text-decoration: none;
+      border-radius: 9999px; height: 48px; padding: 0 28px; background: #4f46e5; color: #ffffff;
+      font-size: 16px; font-weight: 600; letter-spacing: 0.015em; text-decoration: none;
+      transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
     }
+    .hero-btn:hover { background: #3525cd; box-shadow: 0 4px 12px rgb(79 70 229 / 0.4); transform: translateY(-1px); }
     @media (max-width: 768px) {
-      .hero-banner { min-height: 320px; padding: 24px 16px; }
+      .hero-container { padding: 16px; }
+      .hero-banner { min-height: 360px; padding: 28px 20px; }
       .hero-title { font-size: 28px; }
-      .hero-subtitle { font-size: 14px; }
+      .hero-subtitle { font-size: 16px; }
     }
   `;
 

@@ -22,37 +22,49 @@ export class TrioHeader extends LitElement {
       align-items: center;
       justify-content: space-between;
       white-space: nowrap;
-      border-bottom: 1px solid #e7edf3;
-      padding: 12px 16px;
+      border-bottom: 1px solid #c7c4d8;
+      padding: 16px 24px;
       gap: 1rem;
-      background: #f8fafc;
-      position: relative;
+      background: color-mix(in srgb, #f9f9ff 85%, transparent);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
     }
-    .header-brand { display: flex; align-items: center; gap: 16px; color: #0e141b; }
-    .header-logo { width: 16px; height: 16px; }
+    .header-brand { display: flex; align-items: center; gap: 12px; color: #141b2b; }
+    .header-logo { width: 20px; height: 20px; color: #4f46e5; }
     .header-brand-name {
-      font-size: 18px; font-weight: 700; color: #111518; text-decoration: none; letter-spacing: -0.015em;
+      font-size: 18px; font-weight: 700; color: #141b2b; text-decoration: none; letter-spacing: -0.02em;
     }
     .header-right { display: flex; flex: 1; justify-content: flex-end; gap: 32px; align-items: center; }
-    .header-nav { display: flex; align-items: center; gap: 36px; }
-    .header-nav-link { color: #0e141b; font-size: 14px; font-weight: 500; text-decoration: none; }
+    .header-nav { display: flex; align-items: center; gap: 32px; }
+    .header-nav-link {
+      color: #464555; font-size: 14px; font-weight: 500; text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .header-nav-link:hover { color: #4f46e5; }
     .header-actions { display: flex; gap: 8px; }
     .header-cta-btn {
       display: flex; min-width: 84px; cursor: pointer; align-items: center; justify-content: center; border-radius: 9999px;
-      height: 40px; padding: 0 16px; background: #1572cf; color: #f8fafc; font-size: 14px; font-weight: 700;
+      height: 40px; padding: 0 20px; background: #4f46e5; color: #ffffff; font-size: 14px; font-weight: 600;
       letter-spacing: 0.015em; border: none; text-decoration: none;
+      transition: background 0.2s ease, box-shadow 0.2s ease;
     }
+    .header-cta-btn:hover { background: #3525cd; box-shadow: 0 4px 6px -1px rgb(79 70 229 / 0.3); }
     .header-lang-btn {
       display: flex; cursor: pointer; align-items: center; justify-content: center; border-radius: 9999px;
-      height: 40px; min-width: 40px; padding: 0 10px; background: #e7edf3; color: #0e141b; text-decoration: none; border: none;
+      height: 40px; min-width: 40px; padding: 0 10px; background: #e9edff; color: #464555; text-decoration: none; border: none;
+      transition: background 0.2s ease;
     }
+    .header-lang-btn:hover { background: #e2dfff; color: #4f46e5; }
     .hamburger {
       display: none;
       cursor: pointer;
       background: none;
       border: none;
       font-size: 24px;
-      color: #0e141b;
+      color: #141b2b;
       padding: 4px 8px;
       line-height: 1;
     }
@@ -61,6 +73,7 @@ export class TrioHeader extends LitElement {
     }
 
     @media (max-width: 768px) {
+      .header { padding: 12px 16px; }
       .header-nav { display: none; }
       .hamburger { display: flex; align-items: center; }
       .mobile-nav {
@@ -70,28 +83,29 @@ export class TrioHeader extends LitElement {
         top: 100%;
         left: 0;
         right: 0;
-        background: #f8fafc;
-        border-bottom: 1px solid #e7edf3;
+        background: #f9f9ff;
+        border-bottom: 1px solid #c7c4d8;
         padding: 8px 0;
         z-index: 100;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        box-shadow: 0 8px 16px -4px rgba(0,0,0,0.1);
       }
       .mobile-nav[hidden] { display: none; }
       .mobile-nav-link {
-        color: #0e141b;
+        color: #141b2b;
         font-size: 15px;
         font-weight: 500;
         text-decoration: none;
-        padding: 12px 24px;
-        border-bottom: 1px solid #e7edf3;
+        padding: 14px 24px;
+        border-bottom: 1px solid #e9edff;
+        transition: background 0.15s ease;
       }
       .mobile-nav-link:last-child { border-bottom: none; }
-      .mobile-nav-link:hover { background: #eef2f6; }
+      .mobile-nav-link:hover { background: #f1f3ff; color: #4f46e5; }
     }
 
     @media (max-width: 900px) and (min-width: 769px) {
-      .header { padding: 12px 16px; }
-      .header-nav { gap: 16px; }
+      .header { padding: 14px 20px; }
+      .header-nav { gap: 20px; }
     }
   `;
 

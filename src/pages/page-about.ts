@@ -17,81 +17,88 @@ export class PageAbout extends LitElement {
     .container {
       max-width: 960px;
       margin: 0 auto;
-      padding: 0 1rem;
+      padding: 0 24px;
     }
     .header-section {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 0.75rem;
-      padding: 1rem;
+      padding: 1rem 0 1.5rem;
     }
     .page-title {
       font-size: 32px;
-      font-weight: bold;
-      line-height: 1.2;
-      letter-spacing: -0.015em;
-      color: #111518;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #141b2b;
       margin: 0;
       min-width: 288px;
     }
     .text-content {
       font-size: 16px;
       font-weight: normal;
-      line-height: 1.5;
-      color: #111518;
-      padding: 0.25rem 1rem 0.75rem;
+      line-height: 1.6;
+      color: #464555;
+      padding: 0.25rem 0 0.75rem;
       margin: 0;
     }
     .section-heading {
-      font-size: 22px;
-      font-weight: bold;
-      line-height: 1.2;
-      letter-spacing: -0.015em;
-      color: #111518;
-      padding: 1.25rem 1rem 0.75rem;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #4f46e5;
+      padding: 2.5rem 0 1rem;
       margin: 0;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
-      gap: 0.75rem;
-      padding: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      padding: 0.5rem 0 1rem;
     }
     .card {
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      border: 1px solid #d5dce2;
-      background-color: #f9fafb; /* gray-50 */
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+      border: 1px solid #c7c4d8;
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+      transition: box-shadow 0.25s ease, transform 0.2s ease;
     }
+    .card:hover { box-shadow: 0 8px 16px -4px rgb(0 0 0 / 0.1); transform: translateY(-2px); }
     .card--ai {
-      background-color: #eef4ff;
-      border-color: #b3caf5;
+      background-color: #f1f3ff;
+      border-color: #c3c0ff;
     }
+    .card--ai:hover { box-shadow: 0 8px 16px -4px rgb(79 70 229 / 0.15); }
     .card-icon {
-      color: #111518;
+      color: #464555;
       width: 24px;
       height: 24px;
     }
+    .card--ai .card-icon { color: #4f46e5; }
     .card-title {
       font-size: 16px;
-      font-weight: bold;
+      font-weight: 600;
       line-height: 1.2;
-      color: #111518;
+      color: #141b2b;
       margin: 0;
     }
     .card-desc {
       font-size: 14px;
       font-weight: normal;
       line-height: 1.5;
-      color: #5e7387;
+      color: #777587;
       margin: 0;
     }
     @media (max-width: 768px) {
       .page-title { font-size: 24px; min-width: 0; }
+      .container { padding: 0 16px; }
       .grid { grid-template-columns: 1fr; }
       .text-content { font-size: 14px; }
     }

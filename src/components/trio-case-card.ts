@@ -12,15 +12,22 @@ export class TrioCaseCard extends LitElement {
 
   static styles = css`
     :host { display: block; width: 100%; }
-    
+
     /* Vertical layout (Home page) */
-    .case-card { display: flex; flex-direction: column; gap: 12px; border-radius: 8px; min-width: 240px; }
-    .case-card-image-wrap { width: 100%; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; background: #eee; }
-    .case-card-image { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .case-card-body { display: flex; flex-direction: column; gap: 4px; }
-    .case-card-client { color: #4d7399; font-size: 12px; font-weight: 500; margin: 0; }
-    .case-card-title { color: #0e141b; font-size: 16px; font-weight: 700; line-height: 1.4; margin: 0; }
-    .case-card-description { color: #4d7399; font-size: 14px; line-height: 1.5; margin: 0; }
+    .case-card { display: flex; flex-direction: column; gap: 14px; border-radius: 0.75rem; min-width: 240px; }
+    .case-card-image-wrap {
+      width: 100%; aspect-ratio: 16/9; border-radius: 0.75rem; overflow: hidden; background: #e9edff;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08);
+    }
+    .case-card-image {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 0.3s ease;
+    }
+    .case-card:hover .case-card-image { transform: scale(1.03); }
+    .case-card-body { display: flex; flex-direction: column; gap: 6px; }
+    .case-card-client { color: #777587; font-size: 12px; font-weight: 600; margin: 0; letter-spacing: 0.03em; text-transform: uppercase; }
+    .case-card-title { color: #141b2b; font-size: 16px; font-weight: 600; line-height: 1.4; margin: 0; }
+    .case-card-description { color: #777587; font-size: 14px; line-height: 1.5; margin: 0; }
 
     /* Horizontal layout (Cases page) */
     .case-card.horizontal {
@@ -28,7 +35,7 @@ export class TrioCaseCard extends LitElement {
       align-items: flex-start;
       gap: 24px;
       padding: 24px 0;
-      border-bottom: 1px solid #eaedf0;
+      border-bottom: 1px solid #c7c4d8;
     }
     .case-card.horizontal .case-card-image-wrap {
       flex: 0 0 40%;
@@ -41,12 +48,14 @@ export class TrioCaseCard extends LitElement {
     .case-card.horizontal .case-card-client {
       font-size: 22px;
       font-weight: 700;
-      color: #0e141b;
+      color: #141b2b;
+      text-transform: none;
+      letter-spacing: -0.01em;
     }
     .case-card.horizontal .case-card-title {
       font-size: 16px;
       font-weight: 400;
-      color: #0e141b;
+      color: #464555;
     }
 
     @media (max-width: 768px) {

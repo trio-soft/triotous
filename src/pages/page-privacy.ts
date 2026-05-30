@@ -15,27 +15,29 @@ export class PagePrivacy extends LitElement {
     .container {
       max-width: 960px;
       margin: 0 auto;
-      padding: 0 1rem;
+      padding: 0 24px;
     }
     .page-title {
       font-size: 32px;
-      font-weight: bold;
-      line-height: 1.2;
-      letter-spacing: -0.015em;
-      color: #111518;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #141b2b;
       margin: 0 0 1.5rem 0;
-      padding: 1rem;
+      padding: 1rem 0;
     }
     .content {
       font-size: 16px;
-      line-height: 1.6;
-      color: #111518;
-      padding: 0 1rem;
+      line-height: 1.7;
+      color: #464555;
+      padding: 0;
     }
     .content h3 {
-      font-size: 20px;
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
+      font-size: 18px;
+      font-weight: 600;
+      color: #141b2b;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
     }
     .content p {
       margin-bottom: 1rem;
@@ -43,6 +45,7 @@ export class PagePrivacy extends LitElement {
     @media (max-width: 768px) {
       .page-title { font-size: 24px; }
       .content { font-size: 14px; }
+      .container { padding: 0 16px; }
     }
   `;
 

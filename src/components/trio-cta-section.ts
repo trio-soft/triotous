@@ -11,37 +11,38 @@ export class TrioCtaSection extends LitElement {
 
   static styles = css`
     :host { display: block; }
-    .cta-wrap { padding: 20px 16px; }
+    .cta-wrap { padding: 2.5rem 24px; }
     .cta-box {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 24px;
-      padding: 40px 0;
-      background: #f8fafc;
-      border-radius: 12px;
+      gap: 28px;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, #e2dfff 0%, #f1f3ff 100%);
+      border-radius: 0.75rem;
+      border: 1px solid #c7c4d8;
     }
     .cta-text { display: flex; flex-direction: column; gap: 12px; text-align: center; align-items: center; }
     .cta-title {
-      color: #0e141b;
+      color: #141b2b;
       font-size: 28px;
-      font-weight: 900;
+      font-weight: 700;
       line-height: 1.2;
-      letter-spacing: -0.033em;
+      letter-spacing: -0.02em;
       margin: 0;
-      max-width: 720px;
+      max-width: 640px;
     }
     @media (max-width: 768px) {
       .cta-title { font-size: 22px; }
-      .cta-box { padding: 24px 16px; }
+      .cta-box { padding: 2rem 1.5rem; }
+      .cta-wrap { padding: 1.5rem 16px; }
     }
     .cta-subtitle {
-      color: #0e141b;
+      color: #464555;
       font-size: 16px;
-      line-height: 1.5;
+      line-height: 1.6;
       margin: 0;
-      max-width: 720px;
-      opacity: 0.8;
+      max-width: 640px;
     }
     .cta-action { display: flex; justify-content: center; }
     .cta-button {
@@ -51,14 +52,16 @@ export class TrioCtaSection extends LitElement {
       justify-content: center;
       border-radius: 9999px;
       height: 48px;
-      padding: 0 24px;
-      background: #1572cf;
-      color: #f8fafc;
+      padding: 0 28px;
+      background: #4f46e5;
+      color: #ffffff;
       font-size: 16px;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: 0.015em;
       text-decoration: none;
+      transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
     }
+    .cta-button:hover { background: #3525cd; box-shadow: 0 4px 12px rgb(79 70 229 / 0.4); transform: translateY(-1px); }
   `;
 
   render() {
