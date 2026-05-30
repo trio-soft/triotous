@@ -13,8 +13,8 @@ export class TrioServiceGrid extends LitElement {
     }
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
       padding: 0;
     }
     @media (max-width: 768px) {

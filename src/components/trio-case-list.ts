@@ -25,8 +25,8 @@ export class TrioCaseList extends LitElement {
     .case-list-scrollable .case-list-inner {
       display: flex;
       align-items: stretch;
-      padding: 16px;
-      gap: 12px;
+      padding: 0.5rem 24px 1rem;
+      gap: 16px;
     }
     @media (max-width: 768px) {
       .case-list-scrollable {

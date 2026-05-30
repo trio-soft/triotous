@@ -9,16 +9,22 @@ export class PageServices extends LitElement {
   @property({ type: String }) lang = 'en';
   static styles = css`
     :host { display: block; }
-    .page-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 16px; }
+    .page-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 2rem 24px; }
     .page-head-box { display: flex; min-width: 288px; flex-direction: column; gap: 12px; }
-    .page-title { color: #111518; font-size: 32px; font-weight: 700; line-height: 1.2; margin: 0; }
-    .page-subtitle { color: #4d7499; font-size: 14px; line-height: 1.5; margin: 0; }
-    .section-title { color: #0e151b; font-size: 22px; font-weight: 700; line-height: 1.2; letter-spacing: -0.015em; padding: 20px 16px 12px; margin: 0; }
-    .grid-wrap { padding: 16px; }
+    .page-title { color: #141b2b; font-size: 32px; font-weight: 700; line-height: 1.1; margin: 0; letter-spacing: -0.02em; }
+    .page-subtitle { color: #777587; font-size: 16px; line-height: 1.6; margin: 0; }
+    .section-title {
+      color: #4f46e5; font-size: 12px; font-weight: 600; line-height: 1;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 2.5rem 24px 1rem; margin: 0;
+    }
+    .grid-wrap { padding: 0.5rem 24px 1rem; }
     @media (max-width: 768px) {
       .page-title { font-size: 24px; }
+      .page-head { padding: 1.5rem 16px; }
       .page-head-box { min-width: 0; }
-      .section-title { font-size: 18px; }
+      .section-title { padding: 2rem 16px 0.75rem; }
+      .grid-wrap { padding: 0.5rem 16px 1rem; }
     }
   `;
   render() {

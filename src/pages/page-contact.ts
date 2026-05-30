@@ -21,14 +21,14 @@ export class PageContact extends LitElement {
     .container {
       max-width: 960px;
       margin: 0 auto;
-      padding: 0 1rem;
+      padding: 0 24px;
     }
     .header-section {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 0.75rem;
-      padding: 1rem;
+      padding: 1rem 0 1.5rem;
     }
     .title-group {
       display: flex;
@@ -38,32 +38,32 @@ export class PageContact extends LitElement {
     }
     .page-title {
       font-size: 32px;
-      font-weight: bold;
-      line-height: 1.2;
-      letter-spacing: -0.015em;
-      color: #111518;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #141b2b;
       margin: 0;
     }
     .page-subtitle {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: normal;
-      line-height: 1.5;
-      color: #5e7387;
+      line-height: 1.6;
+      color: #777587;
       margin: 0;
     }
     .form-group {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      padding: 0.75rem 1rem;
-      max-width: 480px;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+      max-width: 520px;
     }
     .field-label {
-      font-size: 16px;
-      font-weight: 500;
+      font-size: 14px;
+      font-weight: 600;
       line-height: 1.5;
-      color: #111518;
-      padding-bottom: 0.5rem;
+      color: #141b2b;
+      padding-bottom: 0.25rem;
       margin: 0;
     }
     .form-input {
@@ -71,19 +71,21 @@ export class PageContact extends LitElement {
       width: 100%;
       min-width: 0;
       flex: 1;
-      border-radius: 0.75rem;
-      color: #111518;
-      border: 1px solid #d5dce2;
-      background-color: #f9fafb;
-      height: 3.5rem;
-      padding: 0.9375rem;
+      border-radius: 0.5rem;
+      color: #141b2b;
+      border: 1px solid #c7c4d8;
+      background-color: #ffffff;
+      height: 3rem;
+      padding: 0.75rem 1rem;
       font-size: 16px;
       font-family: inherit;
       box-sizing: border-box;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
     .form-input:focus {
       outline: none;
-      border-color: #1572cf;
+      border-color: #4f46e5;
+      box-shadow: 0 0 0 3px rgb(79 70 229 / 0.15);
     }
     .form-textarea {
       min-height: 9rem;
@@ -91,7 +93,7 @@ export class PageContact extends LitElement {
     }
     .btn-container {
       display: flex;
-      padding: 0.75rem 1rem;
+      padding: 1rem 0;
       justify-content: flex-start;
       align-items: center;
       gap: 1rem;
@@ -103,14 +105,19 @@ export class PageContact extends LitElement {
       align-items: center;
       justify-content: center;
       border-radius: 9999px;
-      height: 2.5rem;
-      padding: 0 1.5rem;
-      background-color: #1572cf;
-      color: #f8fafc;
+      height: 2.75rem;
+      padding: 0 2rem;
+      background-color: #4f46e5;
+      color: #ffffff;
       font-size: 14px;
-      font-weight: bold;
+      font-weight: 600;
       border: none;
       font-family: inherit;
+      transition: background 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-submit:hover {
+      background-color: #3525cd;
+      box-shadow: 0 4px 12px rgb(79 70 229 / 0.4);
     }
     .btn-submit:disabled {
       opacity: 0.6;
@@ -120,7 +127,7 @@ export class PageContact extends LitElement {
       font-size: 14px;
       line-height: 1.5;
       margin: 0;
-      padding: 0 1rem;
+      padding: 0.5rem 0;
     }
     .status-success {
       color: #16a34a;
@@ -129,31 +136,33 @@ export class PageContact extends LitElement {
       color: #dc2626;
     }
     .section-heading {
-      font-size: 22px;
-      font-weight: bold;
-      line-height: 1.2;
-      letter-spacing: -0.015em;
-      color: #111518;
-      padding: 1.25rem 1rem 0.75rem;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #4f46e5;
+      padding: 2.5rem 0 1rem;
       margin: 0;
     }
     .info-text {
       font-size: 16px;
       font-weight: normal;
-      line-height: 1.5;
-      color: #111518;
-      padding: 0.25rem 1rem 0.75rem;
+      line-height: 1.6;
+      color: #464555;
+      padding: 0.25rem 0 0.5rem;
       margin: 0;
     }
     .map-container {
       display: flex;
-      padding: 0.75rem 1rem;
+      padding: 0.75rem 0;
     }
     .map-wrapper {
       width: 100%;
       aspect-ratio: 16 / 9;
       border-radius: 0.75rem;
       overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08);
     }
     iframe {
       width: 100%;
@@ -163,6 +172,7 @@ export class PageContact extends LitElement {
     @media (max-width: 768px) {
       .page-title { font-size: 24px; }
       .title-group { min-width: 0; }
+      .container { padding: 0 16px; }
     }
   `;
 

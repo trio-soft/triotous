@@ -13,33 +13,34 @@ export class PageCases extends LitElement {
       padding: 1.25rem 0;
     }
     .container {
-      max-width: 1200px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 0 1rem;
+      padding: 0 24px;
     }
     .header-section {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 0.75rem;
-      padding: 1rem;
+      padding: 1rem 0 1.5rem;
     }
     .page-title {
       font-size: 32px;
-      font-weight: bold;
-      line-height: 1.2;
-      letter-spacing: -0.015em;
-      color: #0e141b;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #141b2b;
       margin: 0;
       min-width: 288px;
     }
     @media (max-width: 768px) {
       .page-title { font-size: 24px; min-width: 0; }
+      .container { padding: 0 16px; }
     }
     .footer-actions {
       display: flex;
       justify-content: center;
-      padding: 0.75rem 1rem;
+      padding: 2rem 0;
     }
     .btn-contact {
       display: inline-flex;
@@ -47,15 +48,20 @@ export class PageCases extends LitElement {
       align-items: center;
       justify-content: center;
       border-radius: 9999px;
-      height: 2.5rem;
-      padding: 0 1.5rem;
+      height: 2.75rem;
+      padding: 0 2rem;
       font-size: 14px;
-      font-weight: bold;
+      font-weight: 600;
       letter-spacing: 0.015em;
       border: none;
       text-decoration: none;
-      background-color: #1572cf;
-      color: #f8fafc;
+      background-color: #4f46e5;
+      color: #ffffff;
+      transition: background 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-contact:hover {
+      background-color: #3525cd;
+      box-shadow: 0 4px 12px rgb(79 70 229 / 0.4);
     }
   `;
 

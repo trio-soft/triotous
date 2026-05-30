@@ -17,6 +17,8 @@ export class TrioFooter extends LitElement {
     .footer-outer {
       display: flex;
       justify-content: center;
+      border-top: 1px solid #c7c4d8;
+      margin-top: 2.5rem;
     }
     .footer-inner {
       display: flex;
@@ -27,8 +29,8 @@ export class TrioFooter extends LitElement {
     .footer-content {
       display: flex;
       flex-direction: column;
-      gap: 24px;
-      padding: 40px 20px;
+      gap: 16px;
+      padding: 2.5rem 24px;
       text-align: center;
     }
     .footer-links {
@@ -36,21 +38,21 @@ export class TrioFooter extends LitElement {
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: 24px;
+      gap: 32px;
     }
     .footer-link {
-      color: #4d7399;
-      font-size: 16px;
-      font-weight: 400;
+      color: #777587;
+      font-size: 14px;
+      font-weight: 500;
       text-decoration: none;
-      min-width: 160px;
+      transition: color 0.2s ease;
     }
     .footer-link:hover {
-      color: #1572cf;
+      color: #4f46e5;
     }
     .footer-copyright {
-      color: #4d7399;
-      font-size: 16px;
+      color: #918f9a;
+      font-size: 14px;
       font-weight: 400;
       margin: 0;
     }
