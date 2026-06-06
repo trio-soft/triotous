@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
-import { LOGO_SVG, GLOBE_SVG } from '../icons.js';
+import { GLOBE_SVG } from '../icons.js';
 import type { NavItem } from '../data/en.js';
 
 @customElement('trio-header')
@@ -33,8 +33,24 @@ export class TrioHeader extends LitElement {
       top: 0;
       z-index: 50;
     }
-    .header-brand { display: flex; align-items: center; gap: 12px; color: var(--text-primary); }
-    .header-logo { width: 20px; height: 20px; color: var(--accent); }
+    .header-brand { display: flex; align-items: center; gap: 14px; color: var(--text-primary); }
+    .header-logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      flex-shrink: 0;
+    }
+    .header-logo {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
     .header-brand-name {
       font-size: 18px; font-weight: 700; color: var(--text-primary); text-decoration: none; letter-spacing: -0.02em;
     }
@@ -149,7 +165,9 @@ export class TrioHeader extends LitElement {
     return html`
       <header class="header">
         <div class="header-brand">
-          <div class="header-logo">${unsafeHTML(LOGO_SVG)}</div>
+          <div class="header-logo-wrap">
+            <img class="header-logo" src="/icons/icon-192.png" alt="Triotous logo" />
+          </div>
           <a class="header-brand-name" href="${homeHref}">${this.data.brand}</a>
         </div>
         <div class="header-right">
