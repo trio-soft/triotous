@@ -11,10 +11,10 @@ export class PageServices extends LitElement {
     :host { display: block; }
     .page-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 2rem 24px; }
     .page-head-box { display: flex; min-width: 288px; flex-direction: column; gap: 12px; }
-    .page-title { color: #141b2b; font-size: 32px; font-weight: 700; line-height: 1.1; margin: 0; letter-spacing: -0.02em; }
-    .page-subtitle { color: #777587; font-size: 16px; line-height: 1.6; margin: 0; }
+    .page-title { color: var(--text-primary); font-size: 32px; font-weight: 700; line-height: 1.1; margin: 0; letter-spacing: -0.02em; }
+    .page-subtitle { color: var(--text-muted); font-size: 16px; line-height: 1.6; margin: 0; }
     .section-title {
-      color: #4f46e5; font-size: 12px; font-weight: 600; line-height: 1;
+      color: var(--accent); font-size: 12px; font-weight: 600; line-height: 1;
       letter-spacing: 0.05em; text-transform: uppercase;
       padding: 2.5rem 24px 1rem; margin: 0;
     }

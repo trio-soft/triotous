@@ -32,7 +32,7 @@ export class PageCareers extends LitElement {
       font-weight: 700;
       line-height: 1.1;
       letter-spacing: -0.02em;
-      color: #141b2b;
+      color: var(--text-primary);
       margin: 0;
       padding: 1rem 0;
     }
@@ -42,14 +42,14 @@ export class PageCareers extends LitElement {
       line-height: 1;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: #4f46e5;
+      color: var(--accent);
       padding: 2.5rem 0 1rem;
       margin: 0;
     }
     .text-content {
       font-size: 16px;
       line-height: 1.7;
-      color: #464555;
+      color: var(--text-secondary);
       padding: 0.25rem 0 0.75rem;
       margin: 0;
     }
@@ -65,27 +65,27 @@ export class PageCareers extends LitElement {
       gap: 0.75rem;
       padding: 1.25rem;
       border-radius: 0.75rem;
-      border: 1px solid #c7c4d8;
-      background-color: #ffffff;
-      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+      border: 1px solid var(--border);
+      background-color: var(--surface);
+      box-shadow: var(--shadow-sm);
       transition: box-shadow 0.25s ease, transform 0.2s ease;
     }
-    .value-card:hover { box-shadow: 0 8px 16px -4px rgb(79 70 229 / 0.12); transform: translateY(-2px); }
+    .value-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
     .value-icon {
-      color: #4f46e5;
+      color: var(--accent);
       width: 24px;
       height: 24px;
     }
     .value-title {
       font-size: 16px;
       font-weight: 600;
-      color: #141b2b;
+      color: var(--text-primary);
       margin: 0;
     }
     .value-desc {
       font-size: 14px;
       line-height: 1.6;
-      color: #777587;
+      color: var(--text-muted);
       margin: 0;
     }
     .culture-list {
@@ -95,7 +95,7 @@ export class PageCareers extends LitElement {
     .culture-list li {
       font-size: 15px;
       line-height: 1.8;
-      color: #464555;
+      color: var(--text-secondary);
     }
     .json-ld { display: none; }
     @media (max-width: 768px) {

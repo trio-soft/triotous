@@ -31,7 +31,7 @@ export class PageAbout extends LitElement {
       font-weight: 700;
       line-height: 1.1;
       letter-spacing: -0.02em;
-      color: #141b2b;
+      color: var(--text-primary);
       margin: 0;
       min-width: 288px;
     }
@@ -39,7 +39,7 @@ export class PageAbout extends LitElement {
       font-size: 16px;
       font-weight: normal;
       line-height: 1.6;
-      color: #464555;
+      color: var(--text-secondary);
       padding: 0.25rem 0 0.75rem;
       margin: 0;
     }
@@ -49,7 +49,7 @@ export class PageAbout extends LitElement {
       line-height: 1;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: #4f46e5;
+      color: var(--accent);
       padding: 2.5rem 0 1rem;
       margin: 0;
     }
@@ -65,36 +65,48 @@ export class PageAbout extends LitElement {
       gap: 0.75rem;
       padding: 1.25rem;
       border-radius: 0.75rem;
-      border: 1px solid #c7c4d8;
-      background-color: #ffffff;
-      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+      border: 1px solid var(--border);
+      background-color: var(--surface);
+      box-shadow: var(--shadow-sm);
       transition: box-shadow 0.25s ease, transform 0.2s ease;
     }
-    .card:hover { box-shadow: 0 8px 16px -4px rgb(0 0 0 / 0.1); transform: translateY(-2px); }
+    .card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
     .card--ai {
-      background-color: #f1f3ff;
-      border-color: #c3c0ff;
+      background-color: var(--surface-muted);
+      border-color: var(--border-strong);
     }
-    .card--ai:hover { box-shadow: 0 8px 16px -4px rgb(79 70 229 / 0.15); }
+    .card--ai:hover { box-shadow: var(--shadow-md); }
     .card-icon {
-      color: #464555;
+      color: var(--text-secondary);
       width: 24px;
       height: 24px;
     }
-    .card--ai .card-icon { color: #4f46e5; }
+    .card--ai .card-icon { color: var(--accent); }
+    .card-icon--ai { color: var(--accent); }
     .card-title {
       font-size: 16px;
       font-weight: 600;
       line-height: 1.2;
-      color: #141b2b;
+      color: var(--text-primary);
       margin: 0;
     }
     .card-desc {
       font-size: 14px;
       font-weight: normal;
       line-height: 1.5;
-      color: #777587;
+      color: var(--text-muted);
       margin: 0;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      background: var(--accent-soft-strong);
+      border-radius: 4px;
+      padding: 2px 6px;
+      margin-top: 4px;
     }
     @media (max-width: 768px) {
       .page-title { font-size: 24px; min-width: 0; }
@@ -119,11 +131,11 @@ export class PageAbout extends LitElement {
         <div class="grid">
           ${this.data.team.map((member: any) => html`
             <div class="card ${member.isAI ? 'card--ai' : ''}">
-              <div class="card-icon" style="${member.isAI ? 'color:#3b5bdb' : ''}">${unsafeHTML(member.isAI ? ROBOT_SVG : USER_SVG)}</div>
+              <div class="card-icon ${member.isAI ? 'card-icon--ai' : ''}">${unsafeHTML(member.isAI ? ROBOT_SVG : USER_SVG)}</div>
               <div class="title-group">
                 <h3 class="card-title">${member.name}</h3>
                 <p class="card-desc">${member.role}</p>
-                ${member.isAI ? html`<span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.05em;color:#3b5bdb;background:#dbe4ff;border-radius:4px;padding:2px 6px;margin-top:4px;">Digital Employee</span>` : ''}
+                ${member.isAI ? html`<span class="badge">Digital Employee</span>` : ''}
               </div>
             </div>
           `)}

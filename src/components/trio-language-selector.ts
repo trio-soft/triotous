@@ -9,7 +9,10 @@ export class TrioLanguageSelector extends LitElement {
     :host {
       display: block;
       height: 100vh;
-      background-color: #f9f9ff;
+      background:
+        radial-gradient(circle at top left, rgb(79 70 229 / 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgb(56 189 248 / 0.12), transparent 22%),
+        var(--app-bg);
     }
     .wrapper {
       display: flex;
@@ -36,13 +39,13 @@ export class TrioLanguageSelector extends LitElement {
     .title {
       font-size: 2.25rem;
       font-weight: 700;
-      color: #141b2b;
+      color: var(--text-primary);
       margin: 0;
       letter-spacing: -0.02em;
     }
     .subtitle {
       font-size: 1rem;
-      color: #777587;
+      color: var(--text-muted);
       margin: 0;
     }
     .options {
@@ -59,16 +62,16 @@ export class TrioLanguageSelector extends LitElement {
       gap: 1rem;
       padding: 1.5rem;
       border-radius: 0.75rem;
-      border: 1px solid #c7c4d8;
-      background-color: white;
+      border: 1px solid var(--border);
+      background-color: var(--surface);
       text-decoration: none;
-      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+      box-shadow: var(--shadow-sm);
       transition: all 0.25s ease;
     }
     .card:hover {
-      background-color: #f1f3ff;
-      border-color: #4f46e5;
-      box-shadow: 0 8px 16px -4px rgb(79 70 229 / 0.15);
+      background-color: var(--surface-muted);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
       transform: translateY(-2px);
     }
     .lang-info {
@@ -83,7 +86,7 @@ export class TrioLanguageSelector extends LitElement {
       align-items: center;
       justify-content: center;
       border-radius: 9999px;
-      background-color: #e2dfff;
+      background-color: var(--accent-soft-strong);
       font-size: 1.5rem;
     }
     .lang-text {
@@ -93,19 +96,19 @@ export class TrioLanguageSelector extends LitElement {
     .lang-name {
       font-size: 1.125rem;
       font-weight: 600;
-      color: #141b2b;
+      color: var(--text-primary);
       margin: 0;
     }
     .lang-desc {
       font-size: 0.875rem;
-      color: #777587;
+      color: var(--text-muted);
       margin: 0;
     }
     .caret {
-      color: #918f9a;
+      color: var(--text-faint);
       transition: color 0.2s ease;
     }
-    .card:hover .caret { color: #4f46e5; }
+    .card:hover .caret { color: var(--accent); }
   `;
 
   render() {

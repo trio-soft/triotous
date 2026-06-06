@@ -18,13 +18,13 @@ export class TrioCtaSection extends LitElement {
       justify-content: center;
       gap: 28px;
       padding: 3rem 2rem;
-      background: linear-gradient(135deg, #e2dfff 0%, #f1f3ff 100%);
+      background: var(--cta-gradient);
       border-radius: 0.75rem;
-      border: 1px solid #c7c4d8;
+      border: 1px solid var(--border);
     }
     .cta-text { display: flex; flex-direction: column; gap: 12px; text-align: center; align-items: center; }
     .cta-title {
-      color: #141b2b;
+      color: var(--text-primary);
       font-size: 28px;
       font-weight: 700;
       line-height: 1.2;
@@ -38,7 +38,7 @@ export class TrioCtaSection extends LitElement {
       .cta-wrap { padding: 1.5rem 16px; }
     }
     .cta-subtitle {
-      color: #464555;
+      color: var(--text-secondary);
       font-size: 16px;
       line-height: 1.6;
       margin: 0;
@@ -53,15 +53,15 @@ export class TrioCtaSection extends LitElement {
       border-radius: 9999px;
       height: 48px;
       padding: 0 28px;
-      background: #4f46e5;
-      color: #ffffff;
+      background: var(--accent);
+      color: var(--accent-contrast);
       font-size: 16px;
       font-weight: 600;
       letter-spacing: 0.015em;
       text-decoration: none;
       transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
     }
-    .cta-button:hover { background: #3525cd; box-shadow: 0 4px 12px rgb(79 70 229 / 0.4); transform: translateY(-1px); }
+    .cta-button:hover { background: var(--accent-strong); box-shadow: var(--shadow-md); transform: translateY(-1px); }
   `;
 
   render() {

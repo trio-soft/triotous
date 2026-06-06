@@ -8,13 +8,13 @@ export class TrioContactInfo extends LitElement {
   static styles = css`
     :host { display: block; }
     .title {
-      color: #4f46e5; font-size: 12px; font-weight: 600; line-height: 1;
+      color: var(--accent); font-size: 12px; font-weight: 600; line-height: 1;
       letter-spacing: 0.05em; text-transform: uppercase;
       padding: 2.5rem 0 1rem; margin: 0;
     }
-    .text { color: #464555; font-size: 16px; line-height: 1.6; padding: 0.25rem 0 0.5rem; margin: 0; }
+    .text { color: var(--text-secondary); font-size: 16px; line-height: 1.6; padding: 0.25rem 0 0.5rem; margin: 0; }
     .map-wrap { display: flex; padding: 0.75rem 0; }
-    .map-frame-wrap { width: 100%; aspect-ratio: 16/9; border-radius: 0.75rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08); }
+    .map-frame-wrap { width: 100%; aspect-ratio: 16/9; border-radius: 0.75rem; overflow: hidden; box-shadow: var(--image-shadow); }
     .map-frame { width: 100%; height: 100%; border: 0; }
   `;
 

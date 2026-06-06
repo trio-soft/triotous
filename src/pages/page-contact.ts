@@ -41,14 +41,14 @@ export class PageContact extends LitElement {
       font-weight: 700;
       line-height: 1.1;
       letter-spacing: -0.02em;
-      color: #141b2b;
+      color: var(--text-primary);
       margin: 0;
     }
     .page-subtitle {
       font-size: 16px;
       font-weight: normal;
       line-height: 1.6;
-      color: #777587;
+      color: var(--text-muted);
       margin: 0;
     }
     .form-group {
@@ -62,7 +62,7 @@ export class PageContact extends LitElement {
       font-size: 14px;
       font-weight: 600;
       line-height: 1.5;
-      color: #141b2b;
+      color: var(--text-primary);
       padding-bottom: 0.25rem;
       margin: 0;
     }
@@ -72,9 +72,9 @@ export class PageContact extends LitElement {
       min-width: 0;
       flex: 1;
       border-radius: 0.5rem;
-      color: #141b2b;
-      border: 1px solid #c7c4d8;
-      background-color: #ffffff;
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      background-color: var(--surface);
       height: 3rem;
       padding: 0.75rem 1rem;
       font-size: 16px;
@@ -84,8 +84,8 @@ export class PageContact extends LitElement {
     }
     .form-input:focus {
       outline: none;
-      border-color: #4f46e5;
-      box-shadow: 0 0 0 3px rgb(79 70 229 / 0.15);
+      border-color: var(--accent);
+      box-shadow: var(--focus-ring);
     }
     .form-textarea {
       min-height: 9rem;
@@ -107,8 +107,8 @@ export class PageContact extends LitElement {
       border-radius: 9999px;
       height: 2.75rem;
       padding: 0 2rem;
-      background-color: #4f46e5;
-      color: #ffffff;
+      background-color: var(--accent);
+      color: var(--accent-contrast);
       font-size: 14px;
       font-weight: 600;
       border: none;
@@ -116,8 +116,8 @@ export class PageContact extends LitElement {
       transition: background 0.2s ease, box-shadow 0.2s ease;
     }
     .btn-submit:hover {
-      background-color: #3525cd;
-      box-shadow: 0 4px 12px rgb(79 70 229 / 0.4);
+      background-color: var(--accent-strong);
+      box-shadow: var(--shadow-md);
     }
     .btn-submit:disabled {
       opacity: 0.6;
@@ -130,10 +130,10 @@ export class PageContact extends LitElement {
       padding: 0.5rem 0;
     }
     .status-success {
-      color: #16a34a;
+      color: var(--success);
     }
     .status-error {
-      color: #dc2626;
+      color: var(--danger);
     }
     .section-heading {
       font-size: 12px;
@@ -141,7 +141,7 @@ export class PageContact extends LitElement {
       line-height: 1;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: #4f46e5;
+      color: var(--accent);
       padding: 2.5rem 0 1rem;
       margin: 0;
     }
@@ -149,7 +149,7 @@ export class PageContact extends LitElement {
       font-size: 16px;
       font-weight: normal;
       line-height: 1.6;
-      color: #464555;
+      color: var(--text-secondary);
       padding: 0.25rem 0 0.5rem;
       margin: 0;
     }
@@ -162,7 +162,7 @@ export class PageContact extends LitElement {
       aspect-ratio: 16 / 9;
       border-radius: 0.75rem;
       overflow: hidden;
-      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08);
+      box-shadow: var(--image-shadow);
     }
     iframe {
       width: 100%;

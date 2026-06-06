@@ -23,7 +23,7 @@ export class TrioHero extends LitElement {
       justify-content: flex-end;
       padding: 48px;
       overflow: hidden;
-      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+      box-shadow: var(--shadow-lg);
     }
     .hero-image {
       position: absolute;
@@ -35,7 +35,7 @@ export class TrioHero extends LitElement {
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(20,27,43,0.05) 0%, rgba(20,27,43,0.55) 100%);
+      background: var(--hero-overlay);
     }
     .hero-content { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 28px; align-items: flex-start; }
     .hero-text { display: flex; flex-direction: column; gap: 12px; }
@@ -46,11 +46,11 @@ export class TrioHero extends LitElement {
     .hero-subtitle { color: rgba(255,255,255,0.9); font-size: 18px; line-height: 1.6; margin: 0; max-width: 640px; }
     .hero-btn {
       display: inline-flex; min-width: 84px; align-items: center; justify-content: center;
-      border-radius: 9999px; height: 48px; padding: 0 28px; background: #4f46e5; color: #ffffff;
+      border-radius: 9999px; height: 48px; padding: 0 28px; background: var(--accent); color: var(--accent-contrast);
       font-size: 16px; font-weight: 600; letter-spacing: 0.015em; text-decoration: none;
       transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
     }
-    .hero-btn:hover { background: #3525cd; box-shadow: 0 4px 12px rgb(79 70 229 / 0.4); transform: translateY(-1px); }
+    .hero-btn:hover { background: var(--accent-strong); box-shadow: var(--shadow-md); transform: translateY(-1px); }
     @media (max-width: 768px) {
       .hero-container { padding: 16px; }
       .hero-banner { min-height: 360px; padding: 28px 20px; }

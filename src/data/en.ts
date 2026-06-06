@@ -39,7 +39,7 @@ export interface ValueCard {
 }
 
 export const en = {
-  brand: 'Trio-Soft',
+  brand: 'Triotous',
   nav: [
     { label: 'Services', href: '#/services' },
     { label: 'Our Work', href: '#/cases' },
@@ -51,13 +51,13 @@ export const en = {
   footer: {
     privacyPolicy: 'Privacy Policy',
     termsOfService: 'Terms of Service',
-    copyright: '© 2025 Trio-Soft. All rights reserved.',
+    copyright: '© 2025 Triotous. All rights reserved.',
   },
   privacy: {
     pageTitle: 'Privacy Policy',
     content: `
       <h3>1. Introduction</h3>
-      <p>Trio-Soft ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.</p>
+      <p>Triotous ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.</p>
       <h3>2. Information We Collect</h3>
       <p>We may collect personal information that you provide to us, such as your name, email address, and any other information you choose to provide when you contact us.</p>
       <h3>3. How We Use Your Information</h3>
@@ -69,7 +69,7 @@ export const en = {
       <h3>6. Changes to This Policy</h3>
       <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
       <h3>7. Contact Us</h3>
-      <p>If you have any questions about this Privacy Policy, please contact us at contact@trio-soft.biz.</p>
+      <p>If you have any questions about this Privacy Policy, please contact us at contact@triotous.com.</p>
     `,
   },
   terms: {
@@ -80,24 +80,24 @@ export const en = {
       <h3>2. Use of the Website</h3>
       <p>You agree to use the website only for lawful purposes and in accordance with these Terms.</p>
       <h3>3. Intellectual Property</h3>
-      <p>All content on this website, including text, graphics, and logos, is the property of Trio-Soft and is protected by intellectual property laws.</p>
+      <p>All content on this website, including text, graphics, and logos, is the property of Triotous and is protected by intellectual property laws.</p>
       <h3>4. Limitation of Liability</h3>
-      <p>Trio-Soft shall not be liable for any damages arising from the use of or inability to use our website.</p>
+      <p>Triotous shall not be liable for any damages arising from the use of or inability to use our website.</p>
       <h3>5. Governing Law</h3>
       <p>These Terms shall be governed by and construed in accordance with the laws of Japan.</p>
       <h3>6. Changes to Terms</h3>
       <p>We reserve the right to modify these Terms at any time. Your continued use of the website after any changes constitutes acceptance of the new Terms.</p>
       <h3>7. Contact Us</h3>
-      <p>If you have any questions about these Terms, please contact us at contact@trio-soft.biz.</p>
+      <p>If you have any questions about these Terms, please contact us at contact@triotous.com.</p>
     `,
   },
   home: {
-    heroTitle: 'Trio-Soft: Architecting Your Digital Future',
+    heroTitle: 'Triotous: Architecting Your Digital Future',
     heroSubtitle: 'We specialize in system architecture consulting, software and app design, and AI solutions, helping businesses thrive in the digital age.',
     heroButton: 'Explore Our Services',
     expertiseTitle: 'Our Expertise',
     expertiseSubtitle: 'Comprehensive Solutions for Your Business Needs',
-    expertiseDescription: 'From initial concept to deployment and beyond, Trio-Soft offers a full suite of services to ensure your success.',
+    expertiseDescription: 'From initial concept to deployment and beyond, Triotous offers a full suite of services to ensure your success.',
     services: [
       {
         icon: 'gear',
@@ -153,7 +153,7 @@ export const en = {
   },
   services: {
     pageTitle: 'Our Services',
-    pageSubtitle: "Trio-Soft offers a comprehensive suite of services designed to empower your business through innovative technology solutions. From strategic consulting to cutting-edge AI applications, we're here to help you achieve your goals.",
+    pageSubtitle: "Triotous offers a comprehensive suite of services designed to empower your business through innovative technology solutions. From strategic consulting to cutting-edge AI applications, we're here to help you achieve your goals.",
     sections: [
       {
         title: 'Consulting & Strategy',
@@ -193,7 +193,7 @@ export const en = {
       },
     ],
     ctaTitle: 'Ready to Transform Your Business?',
-    ctaSubtitle: "Contact us today to discuss how Trio-Soft's services can help you achieve your business objectives.",
+    ctaSubtitle: "Contact us today to discuss how Triotous's services can help you achieve your business objectives.",
     ctaButton: 'Get in Touch',
   },
   cases: {
@@ -222,15 +222,16 @@ export const en = {
     contactUs: 'Get in Touch',
   },
   about: {
-    pageTitle: 'About Trio-Soft',
-    intro: 'At Trio-Soft, we are a dynamic startup dedicated to revolutionizing the tech landscape through innovative system architecture consulting, bespoke software and app design, and cutting-edge AI technology. Our mission is to empower businesses with solutions that not only meet their current needs but also anticipate future challenges, ensuring sustainable growth and competitive advantage.',
+    pageTitle: 'About Triotous',
+    intro: 'At Triotous, we are a dynamic startup dedicated to revolutionizing the tech landscape through innovative system architecture consulting, bespoke software and app design, and cutting-edge AI technology. Our mission is to empower businesses with solutions that not only meet their current needs but also anticipate future challenges, ensuring sustainable growth and competitive advantage.',
     storyTitle: 'Our Story',
-    story: 'Founded in 2025 by a team of seasoned tech experts, Trio-Soft emerged from a shared vision to bridge the gap between complex technological possibilities and practical business applications. We recognized the need for a more agile, client-focused approach to tech consulting and development, leading us to create a company that prioritizes innovation, collaboration, and tangible results.',
+    story: 'Founded in 2025 by a team of seasoned tech experts, Triotous emerged from a shared vision to bridge the gap between complex technological possibilities and practical business applications. We recognized the need for a more agile, client-focused approach to tech consulting and development, leading us to create a company that prioritizes innovation, collaboration, and tangible results.',
     teamTitle: 'Our Team',
     team: [
       { name: 'Bruce Tsai', role: 'CEO & Founder' },
-      { name: 'Kirisumi', role: 'AI Digital Assistant', isAI: true },
-      { name: 'Tsukino', role: 'AI Digital Assistant', isAI: true },
+      { name: 'Kirisumi', role: 'Architecture & Development', isAI: true },
+      { name: 'Sop', role: 'Product Planning / Market Insights', isAI: true },
+      { name: 'Tsukino', role: 'Executive Assistant', isAI: true },
     ] as TeamMember[],
     teamDescription: 'Our team comprises industry veterans and rising stars, each bringing a unique set of skills and experiences to the table. From strategic consulting to hands-on development, our experts are committed to delivering excellence and driving client success.',
     valuesTitle: 'Our Values',
@@ -240,7 +241,7 @@ export const en = {
       { icon: 'rocket', title: 'Excellence', description: 'We are dedicated to delivering high-quality solutions that exceed expectations and drive meaningful impact.' },
     ] as ValueCard[],
     ctaTitle: 'Ready to transform your business with cutting-edge technology?',
-    ctaSubtitle: 'Reach out to us today to discuss your project and explore how Trio-Soft can help you achieve your goals.',
+    ctaSubtitle: 'Reach out to us today to discuss your project and explore how Triotous can help you achieve your goals.',
     ctaButton: 'Get in Touch',
   },
   contact: {
@@ -257,9 +258,9 @@ export const en = {
     submit: 'Submit',
   },
   careers: {
-    pageTitle: 'Careers at Trio-Soft',
+    pageTitle: 'Careers at Triotous',
     introTitle: 'Join Our Team',
-    intro: 'At Trio-Soft, we believe great technology is built by great people. We are looking for passionate individuals who want to make a real impact through technology. If you thrive in a transparent, flat, and innovative environment, we want to hear from you.',
+    intro: 'At Triotous, we believe great technology is built by great people. We are looking for passionate individuals who want to make a real impact through technology. If you thrive in a transparent, flat, and innovative environment, we want to hear from you.',
     valuesTitle: 'Our Values',
     values: [
       { icon: 'users', title: 'Transparent Communication', description: 'We prioritize openness and dialogue above all else. Small concerns are shared early, and everyone can discuss ideas on equal footing—regardless of role or seniority. Open communication builds trust and leads to better products.' },
