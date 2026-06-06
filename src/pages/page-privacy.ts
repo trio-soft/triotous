@@ -22,20 +22,20 @@ export class PagePrivacy extends LitElement {
       font-weight: 700;
       line-height: 1.1;
       letter-spacing: -0.02em;
-      color: #141b2b;
+      color: var(--text-primary);
       margin: 0 0 1.5rem 0;
       padding: 1rem 0;
     }
     .content {
       font-size: 16px;
       line-height: 1.7;
-      color: #464555;
+      color: var(--text-secondary);
       padding: 0;
     }
     .content h3 {
       font-size: 18px;
       font-weight: 600;
-      color: #141b2b;
+      color: var(--text-primary);
       margin-top: 2.5rem;
       margin-bottom: 0.75rem;
     }

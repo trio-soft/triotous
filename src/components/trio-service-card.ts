@@ -48,20 +48,20 @@ export class TrioServiceCard extends LitElement {
       flex: 1;
       gap: 12px;
       border-radius: 0.75rem;
-      border: 1px solid #c7c4d8;
-      background: #ffffff;
+      border: 1px solid var(--border);
+      background: var(--surface);
       padding: 20px;
       flex-direction: column;
-      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+      box-shadow: var(--shadow-sm);
       transition: box-shadow 0.25s ease, transform 0.2s ease, border-color 0.25s ease;
     }
     .service-card:hover {
-      box-shadow: 0 8px 16px -4px rgb(79 70 229 / 0.12);
+      box-shadow: var(--shadow-md);
       transform: translateY(-2px);
-      border-color: #e2dfff;
+      border-color: var(--border-strong);
     }
     .service-card-icon {
-      color: #4f46e5;
+      color: var(--accent);
       width: 24px;
       height: 24px;
     }
@@ -75,14 +75,14 @@ export class TrioServiceCard extends LitElement {
       gap: 6px;
     }
     .service-card-title {
-      color: #141b2b;
+      color: var(--text-primary);
       font-size: 16px;
       font-weight: 600;
       line-height: 1.3;
       margin: 0;
     }
     .service-card-description {
-      color: #777587;
+      color: var(--text-muted);
       font-size: 14px;
       font-weight: 400;
       line-height: 1.5;

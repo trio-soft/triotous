@@ -13,29 +13,29 @@ export class TrioTeamMember extends LitElement {
     :host { display: flex; }
     .card {
       display: flex; flex: 1; gap: 12px; border-radius: 0.75rem;
-      border: 1px solid #c7c4d8; background: #ffffff;
+      border: 1px solid var(--border); background: var(--surface);
       padding: 20px; flex-direction: column;
-      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+      box-shadow: var(--shadow-sm);
       transition: box-shadow 0.25s ease, transform 0.2s ease;
     }
-    .card:hover { box-shadow: 0 8px 16px -4px rgb(0 0 0 / 0.1); transform: translateY(-2px); }
+    .card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
     .card.ai {
-      background: #f1f3ff;
-      border-color: #c3c0ff;
+      background: var(--surface-muted);
+      border-color: var(--border-strong);
     }
-    .card.ai:hover { box-shadow: 0 8px 16px -4px rgb(79 70 229 / 0.15); }
-    .icon { color: #464555; width: 24px; height: 24px; }
-    .card.ai .icon { color: #4f46e5; }
+    .card.ai:hover { box-shadow: var(--shadow-md); }
+    .icon { color: var(--text-secondary); width: 24px; height: 24px; }
+    .card.ai .icon { color: var(--accent); }
     .body { display: flex; flex-direction: column; gap: 4px; }
-    .name { color: #141b2b; font-size: 16px; font-weight: 600; margin: 0; }
-    .role { color: #777587; font-size: 14px; margin: 0; }
+    .name { color: var(--text-primary); font-size: 16px; font-weight: 600; margin: 0; }
+    .role { color: var(--text-muted); font-size: 14px; margin: 0; }
     .badge {
       display: inline-block;
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.05em;
-      color: #4f46e5;
-      background: #e2dfff;
+      color: var(--accent);
+      background: var(--accent-soft-strong);
       border-radius: 4px;
       padding: 2px 8px;
       margin-top: 4px;

@@ -16,12 +16,12 @@ export class TrioNewsItem extends LitElement {
       border: 1px solid transparent;
       transition: background 0.2s ease, border-color 0.2s ease;
     }
-    .news-item:hover { background: #f1f3ff; border-color: #c7c4d8; }
+    .news-item:hover { background: var(--surface-muted); border-color: var(--border); }
     .news-item-text { display: flex; flex-direction: column; gap: 6px; flex: 2; }
-    .news-item-category { color: #4f46e5; font-size: 12px; font-weight: 600; line-height: 1.5; margin: 0; letter-spacing: 0.05em; text-transform: uppercase; }
-    .news-item-description { color: #777587; font-size: 14px; line-height: 1.5; margin: 0; }
-    .news-item-title { color: #141b2b; font-size: 16px; font-weight: 600; line-height: 1.3; margin: 0; }
-    .news-item-image-wrap { flex: 1; aspect-ratio: 16/9; border-radius: 0.75rem; overflow: hidden; box-shadow: 0 2px 4px rgb(0 0 0 / 0.06); }
+    .news-item-category { color: var(--accent); font-size: 12px; font-weight: 600; line-height: 1.5; margin: 0; letter-spacing: 0.05em; text-transform: uppercase; }
+    .news-item-description { color: var(--text-muted); font-size: 14px; line-height: 1.5; margin: 0; }
+    .news-item-title { color: var(--text-primary); font-size: 16px; font-weight: 600; line-height: 1.3; margin: 0; }
+    .news-item-image-wrap { flex: 1; aspect-ratio: 16/9; border-radius: 0.75rem; overflow: hidden; box-shadow: var(--image-shadow); }
     .news-item-image { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
     .news-item:hover .news-item-image { transform: scale(1.03); }
     @media (max-width: 768px) {

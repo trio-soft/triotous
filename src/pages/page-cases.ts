@@ -29,7 +29,7 @@ export class PageCases extends LitElement {
       font-weight: 700;
       line-height: 1.1;
       letter-spacing: -0.02em;
-      color: #141b2b;
+      color: var(--text-primary);
       margin: 0;
       min-width: 288px;
     }
@@ -55,13 +55,13 @@ export class PageCases extends LitElement {
       letter-spacing: 0.015em;
       border: none;
       text-decoration: none;
-      background-color: #4f46e5;
-      color: #ffffff;
+      background-color: var(--accent);
+      color: var(--accent-contrast);
       transition: background 0.2s ease, box-shadow 0.2s ease;
     }
     .btn-contact:hover {
-      background-color: #3525cd;
-      box-shadow: 0 4px 12px rgb(79 70 229 / 0.4);
+      background-color: var(--accent-strong);
+      box-shadow: var(--shadow-md);
     }
   `;
 
