@@ -8,7 +8,7 @@ import type { NavItem } from '../data/en.js';
 export class TrioHeader extends LitElement {
   @property({ type: String }) lang = 'en';
   @property({ type: Object }) data: { brand: string; nav: NavItem[]; getStarted: string } = {
-    brand: 'Trio-Soft',
+    brand: 'Triotous',
     nav: [],
     getStarted: 'Get Started',
   };

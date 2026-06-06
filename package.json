@@ -1,7 +1,7 @@
 {
-  "name": "trio-soft",
+  "name": "Triotous",
   "version": "1.0.0",
-  "description": "Trio-Soft company website",
+  "description": "Triotous company website",
   "private": true,
   "scripts": {
     "dev": "vite",

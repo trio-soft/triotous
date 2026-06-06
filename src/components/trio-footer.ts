@@ -7,7 +7,7 @@ export class TrioFooter extends LitElement {
   @property({ type: Object }) data: { privacyPolicy: string; termsOfService: string; copyright: string } = {
     privacyPolicy: 'Privacy Policy',
     termsOfService: 'Terms of Service',
-    copyright: '© 2025 Trio-Soft. All rights reserved.',
+    copyright: '© 2025 Triotous. All rights reserved.',
   };
 
   static styles = css`
