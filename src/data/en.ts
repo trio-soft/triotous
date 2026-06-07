@@ -92,7 +92,7 @@ export const en = {
     `,
   },
   home: {
-    heroTitle: 'Triotous: Architecting Your Digital Future',
+    heroTitle: '',
     heroSubtitle: 'We specialize in system architecture consulting, software and app design, and AI solutions, helping businesses thrive in the digital age.',
     heroButton: 'Explore Our Services',
     expertiseTitle: 'Our Expertise',

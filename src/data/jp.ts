@@ -55,7 +55,7 @@ export const jp: SiteData = {
     `,
   },
   home: {
-    heroTitle: 'トリオタス：あなたのデジタル未来を設計します',
+    heroTitle: '',
     heroSubtitle: 'システムアーキテクチャコンサルティング、ソフトウェア・アプリ設計、AIソリューションを専門とし、デジタル時代のビジネス成長を支援します。',
     heroButton: 'サービスを見る',
     expertiseTitle: '私たちの専門分野',
