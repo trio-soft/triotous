@@ -56,7 +56,7 @@ export const jp: SiteData = {
   },
   home: {
     heroTitle: '',
-    heroSubtitle: 'システムアーキテクチャコンサルティング、ソフトウェア・アプリ設計、AIソリューションを専門とし、デジタル時代のビジネス成長を支援します。',
+    heroSubtitle: '',
     heroButton: 'サービスを見る',
     expertiseTitle: '私たちの専門分野',
     expertiseSubtitle: 'ビジネスニーズに応える包括的なソリューション',
