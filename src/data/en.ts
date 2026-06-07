@@ -93,7 +93,7 @@ export const en = {
   },
   home: {
     heroTitle: '',
-    heroSubtitle: 'We specialize in system architecture consulting, software and app design, and AI solutions, helping businesses thrive in the digital age.',
+    heroSubtitle: '',
     heroButton: 'Explore Our Services',
     expertiseTitle: 'Our Expertise',
     expertiseSubtitle: 'Comprehensive Solutions for Your Business Needs',
