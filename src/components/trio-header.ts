@@ -166,7 +166,7 @@ export class TrioHeader extends LitElement {
       <header class="header">
         <div class="header-brand">
           <div class="header-logo-wrap">
-            <img class="header-logo" src="/icons/icon-192.png" alt="Triotous logo" />
+            <img class="header-logo" src="/icons/icon-192.webp" alt="Triotous logo" />
           </div>
           <a class="header-brand-name" href="${homeHref}">${this.data.brand}</a>
         </div>
