@@ -36,7 +36,7 @@ export class PageHome extends LitElement {
     if (!h) return html`<div>Loading...</div>`;
     const servicesHref = this.lang === 'jp' ? '#/jp/services' : '#/services';
     const contactHref = this.lang === 'jp' ? '#/jp/contact' : '#/contact';
-    const heroImage = this.lang === 'jp' ? '/hero-jp.jpg' : '/hero-en.jpg';
+    const heroImage = this.lang === 'jp' ? '/hero-jp.webp' : '/hero-en.webp';
     return html`
       <trio-hero .title=${h.heroTitle} .subtitle=${h.heroSubtitle} .buttonText=${h.heroButton} .buttonHref=${servicesHref} .backgroundImage=${heroImage}></trio-hero>
       <h2 class="section-title">${h.expertiseTitle}</h2>
